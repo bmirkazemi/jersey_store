@@ -1,0 +1,54 @@
+.jerseys {
+    width: 400px;
+    float: left;
+    margin: 10px;
+    display: inline-block;
+    background-color: white;
+    border: solid #38A2C3 5px;
+    border-radius: 10px;
+}
+
+img {
+    width: 180px;
+    float: left;
+    padding-top: 10px;
+}
+
+.table {
+    width: 200px;
+    height: 220px;
+    display: inline-block;
+    padding: 10px;
+    float: right;
+}
+
+.description {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+    
+body {
+    height: 650px;
+    background-image: url('http://bedroomdesigncatalog.com/wp-content/uploads/2012/12/Real-Madrid-FC-Black-Logo-Bedroom-Stickers-Wall-Ideas.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: black;
+}
+
+h1 {
+    color: gray;
+}
+
+.form {
+    float: center;
+    width: 350px;
+    border: solid #38A2C3 5px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}

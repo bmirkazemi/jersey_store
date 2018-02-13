@@ -1,0 +1,84 @@
+mysql> desc Users;
++---------------+------------------+------+-----+---------+----------------+
+| Field         | Type             | Null | Key | Default | Extra          |
++---------------+------------------+------+-----+---------+----------------+
+| user_id       | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| user_uname    | varchar(255)     | YES  |     | NULL    |                |
+| user_email    | varchar(255)     | YES  |     | NULL    |                |
+| user_password | varchar(255)     | YES  |     | NULL    |                |
+| user_fname    | varchar(255)     | YES  |     | NULL    |                |
++---------------+------------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> SELECT * FROM Users;
++---------+------------+---------------+---------------+------------+
+| user_id | user_uname | user_email    | user_password | user_fname |
++---------+------------+---------------+---------------+------------+
+|       1 | test       | test@test.com | testpassword  | testfname  |
+|       2 | bmirkazemi | b@yahoo.com   | soccer        | bijan      |
+|       7 | hello      | a             | 1             | NULL       |
+|       8 | j          | f             | 2             | NULL       |
+|       9 | bijan      | sample        | 123           | NULL       |
++---------+------------+---------------+---------------+------------+
+5 rows in set (0.01 sec)
+
+mysql> desc Products;
++------------------+---------------------+------+-----+---------+----------------+
+| Field            | Type                | Null | Key | Default | Extra          |
++------------------+---------------------+------+-----+---------+----------------+
+| prod_id          | int(10) unsigned    | NO   | PRI | NULL    | auto_increment |
+| prod_name        | varchar(127)        | YES  |     | NULL    |                |
+| prod_img         | varchar(127)        | YES  |     | NULL    |                |
+| prod_description | varchar(127)        | YES  |     | NULL    |                |
+| prod_price       | decimal(10,2)       | YES  |     | NULL    |                |
+| prod_rating      | tinyint(3) unsigned | YES  |     | NULL    |                |
+| prod_sku         | char(32)            | YES  |     | NULL    |                |
+| prod_stock       | int(10) unsigned    | YES  |     | NULL    |                |
+| prod_jer         | varchar(127)        | YES  |     | NULL    |                |
++------------------+---------------------+------+-----+---------+----------------+
+9 rows in set (0.01 sec)
+
+mysql> SELECT * FROM Products;
++---------+---------------------+--------------+----------------------+------------+-------------+----------------+------------+----------------+
+| prod_id | prod_name           | prod_img     | prod_description     | prod_price | prod_rating | prod_sku       | prod_stock | prod_jer       |
++---------+---------------------+--------------+----------------------+------------+-------------+----------------+------------+----------------+
+|       1 | Real Madrid         | rma.jpg      | Best Team Ever       |      99.99 |           5 | asd123jkl456z0 |          1 | rma_jersey.jpg |
+|       2 | FC Barcelona        | barca.jpg    | Dont Buy this        |      89.99 |           0 | asd123jkl456z1 |          0 | fcb_jersey.jpg |
+|       3 | Manchester Utd      | manu.jpg     | ManU Home Jersey     |      94.99 |           4 | asd123jkl456z2 |          1 | mu_jersey.jpg  |
+|       4 | Cultural Leonesa    | leonesa.jpg  | Worst Team in Spain  |      49.99 |           1 | asd123jkl456z3 |          0 | cl_jersey.jpg  |
+|       5 | Dortmund            | dortmund.jpg | Dortmund Away Jersey |      59.99 |           5 | asd123jkl456z4 |          1 | bd_jersey.jpg  |
+|       6 | Paris Saint Germain | psg.jpg      | PSG Home Jersey      |      79.99 |           2 | asd123jkl456z5 |          0 | psg_jersey.jpg |
+|       7 | Chelsea FC          | chelsea.jpg  | Chelsea Home Jersey  |      64.99 |           2 | asd123jkl456z6 |          1 | cfc_jersey.jpg |
+|       8 | AC Milan            | milan.jpg    | AC Milan Away Jersey |      74.99 |           3 | asd123jkl456z7 |          0 | acm_jersey.jpg |
+|       9 | Arsenal FC          | arsenal.jpg  | Arsenal Home Jersey  |      54.99 |           3 | asd123jkl456z8 |          1 | ars_jersey.jpg |
+|      10 | AS Monaco           | monaco.jpg   | Monaco Home Jersey   |      69.99 |           4 | asd123jkl456z9 |          0 | mon_jersey.jpg |
++---------+---------------------+--------------+----------------------+------------+-------------+----------------+------------+----------------+
+10 rows in set (0.00 sec)
+
+mysql> desc Merch;
++------------------+---------------------+------+-----+---------+----------------+
+| Field            | Type                | Null | Key | Default | Extra          |
++------------------+---------------------+------+-----+---------+----------------+
+| prod_id          | int(10) unsigned    | NO   | PRI | NULL    | auto_increment |
+| prod_name        | varchar(127)        | YES  |     | NULL    |                |
+| prod_img         | varchar(127)        | YES  |     | NULL    |                |
+| prod_description | varchar(127)        | YES  |     | NULL    |                |
+| prod_price       | decimal(10,2)       | YES  |     | NULL    |                |
+| prod_rating      | tinyint(3) unsigned | YES  |     | NULL    |                |
+| prod_sku         | char(32)            | YES  |     | NULL    |                |
+| prod_stock       | int(10) unsigned    | YES  |     | NULL    |                |
++------------------+---------------------+------+-----+---------+----------------+
+8 rows in set (0.01 sec)
+
+mysql> SELECT * FROM Merch;
++---------+--------------------+------------+--------------------------------------------------+------------+-------------+-----------------+------------+
+| prod_id | prod_name          | prod_img   | prod_description                                 | prod_price | prod_rating | prod_sku        | prod_stock |
++---------+--------------------+------------+--------------------------------------------------+------------+-------------+-----------------+------------+
+|       1 | Ronaldo Bobblehead | bobble.jpg | A signed Cristiano Ronaldo bobblehead toy        |     499.99 |           5 | wer345tyu789z00 |          1 |
+|       2 | Signed Jersey      | jersey.jpg | Real Madrid Jersey signed by Sergio Ramos        |     399.99 |           5 | wer345tyu789z11 |          1 |
+|       3 | Game Tickets       | ticket.jpg | Two VIP tickets to the upcoming Clasico          |     999.99 |           5 | wer345tyu789z22 |          1 |
+|       4 | Team Scarf         | scarf.jpg  | A Real Madrid scarf for fans to wear to the game |      29.99 |           5 | wer345tyu789z33 |          1 |
++---------+--------------------+------------+--------------------------------------------------+------------+-------------+-----------------+------------+
+4 rows in set (0.00 sec)
+
+
